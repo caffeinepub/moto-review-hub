@@ -1,0 +1,135 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Add motorcycle reviews section and redesign logo",
+  "requirements": [
+    {
+      "id": "REQ-16",
+      "summary": "Create a motorcycle reviews submission form component with fields for motorcycle model, manufacturer, year, star rating selector, review text area, and reviewer name",
+      "acceptanceCriteria": [
+        "Form includes all required input fields with appropriate validation",
+        "Star rating selector allows users to select 1-5 stars",
+        "Form submission successfully creates a new motorcycle review in the backend",
+        "Success message is displayed upon successful submission",
+        "Form follows the existing design system and styling patterns"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/MotorcycleReviewForm.tsx",
+          "operation": "create",
+          "description": "Create a new form component for submitting motorcycle reviews with fields for motorcycle model (text input), manufacturer (text input), year (number input), star rating (using existing StarRating component), review text (textarea), and reviewer name (text input). Include form validation, loading states, success/error handling with toast notifications, and call backend.addMotorcycleReview() on submission. Follow the existing ReviewForm.tsx pattern for consistency."
+        }
+      ]
+    },
+    {
+      "id": "REQ-17",
+      "summary": "Create a motorcycle reviews listing page that displays all motorcycle reviews with search functionality, filtering options, and sorting capabilities (newest, oldest, highest rated)",
+      "acceptanceCriteria": [
+        "Page displays all motorcycle reviews in a grid layout",
+        "Search bar filters reviews by motorcycle model or manufacturer",
+        "Sort dropdown allows sorting by newest, oldest, and highest rated",
+        "Each review card shows motorcycle model, manufacturer, year, rating, and preview text",
+        "Clicking a review card navigates to the detailed review page",
+        "Loading states and empty states are handled appropriately"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/MotorcycleReviewCard.tsx",
+          "operation": "create",
+          "description": "Create a card component for displaying individual motorcycle reviews. Show motorcycle model as title, manufacturer and year as subtitle, star rating using StarRating component, preview of review text (truncated), reviewer name, and publication date. Include a Link to navigate to the detail page at /motorcycles/:id. Follow the visual styling pattern from ReviewCard.tsx for consistency."
+        },
+        {
+          "path": "frontend/src/pages/MotorcycleReviews.tsx",
+          "operation": "create",
+          "description": "Create a page component that fetches all motorcycle reviews using useMotorcycleReviewsQuery hook. Include a search input that filters reviews by motorcycle model or manufacturer. Add a sort dropdown with options for newest (sort by publicationDate descending), oldest (publicationDate ascending), and highest rated (rating descending). Display reviews in a responsive grid layout using MotorcycleReviewCard components. Include loading skeleton states and empty state messaging when no reviews match filters. Follow the layout and filtering patterns from Reviews.tsx."
+        },
+        {
+          "path": "frontend/src/hooks/useQueries.ts",
+          "operation": "modify",
+          "description": "Add a new useMotorcycleReviewsQuery hook using useQuery to fetch motorcycle reviews via backend.getAllMotorcycleReviews(). Add a useAddMotorcycleReviewMutation hook using useMutation that calls backend.addMotorcycleReview() with parameters (model, manufacturer, year, rating, reviewText, reviewerName) and invalidates the motorcycle reviews query on success. Follow the existing patterns for gear review queries and mutations."
+        }
+      ]
+    },
+    {
+      "id": "REQ-18",
+      "summary": "Create individual detail pages for motorcycle reviews that display full review content, motorcycle specifications (model, manufacturer, year), star rating, reviewer information, and publication date",
+      "acceptanceCriteria": [
+        "Detail page shows complete motorcycle review information",
+        "Star rating is displayed prominently",
+        "Motorcycle specifications are clearly organized",
+        "Page layout is consistent with existing detail pages (ReviewDetail.tsx pattern)",
+        "Navigation back to motorcycle reviews list is provided"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/MotorcycleReviewDetail.tsx",
+          "operation": "create",
+          "description": "Create a detail page component that displays full motorcycle review information. Use route parameter to identify the specific review by index. Fetch all motorcycle reviews and select the one matching the route parameter. Display motorcycle model as page title, manufacturer and year prominently, star rating using StarRating component in read-only mode, full review text, reviewer name, and formatted publication date. Include a back navigation link to /motorcycles. Show loading states while fetching data and error states if review not found. Follow the layout structure and styling from ReviewDetail.tsx for consistency."
+        }
+      ]
+    },
+    {
+      "id": "REQ-19",
+      "summary": "Add 'Motorcycles' navigation link to the main menu in Navigation.tsx and update routing in App.tsx to include routes for motorcycle reviews listing, submission form, and detail pages",
+      "acceptanceCriteria": [
+        "Navigation bar includes a 'Motorcycles' link positioned logically in the menu",
+        "Routes are configured for /motorcycles, /motorcycles/:id, and /submit-motorcycle-review",
+        "All routes render the correct components",
+        "Mobile hamburger menu includes the new navigation item"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Navigation.tsx",
+          "operation": "modify",
+          "description": "Add a new 'Motorcycles' navigation link in the desktop menu between 'Reviews' and 'Videos' that links to /motorcycles. Also add the link to the mobile hamburger menu in the same position. Ensure the link follows the same styling and active state patterns as existing navigation items."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add three new routes to the router configuration: '/motorcycles' rendering MotorcycleReviews page, '/motorcycles/:id' rendering MotorcycleReviewDetail page, and '/submit-motorcycle-review' rendering SubmitMotorcycleReview page. Position the routes logically with other review and submission routes. Import the new page components at the top of the file."
+        },
+        {
+          "path": "frontend/src/pages/SubmitMotorcycleReview.tsx",
+          "operation": "create",
+          "description": "Create a page component that renders the MotorcycleReviewForm component. Include a page title 'Submit Motorcycle Review' and appropriate page layout wrapper matching the pattern from SubmitReview.tsx. The page serves as a container for the form component."
+        }
+      ]
+    },
+    {
+      "id": "REQ-20",
+      "summary": "Update the homepage to include a featured motorcycle reviews section that showcases the latest motorcycle reviews alongside existing gear reviews and videos",
+      "acceptanceCriteria": [
+        "Homepage displays a dedicated section for featured motorcycle reviews",
+        "Section shows 3-4 latest motorcycle reviews in a visually appealing layout",
+        "Section heading clearly identifies it as motorcycle reviews",
+        "Layout maintains consistency with existing featured sections",
+        "Click-through navigation to full motorcycle reviews list is provided"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Home.tsx",
+          "operation": "modify",
+          "description": "Add a new featured motorcycle reviews section below the existing featured gear reviews section. Fetch motorcycle reviews using useMotorcycleReviewsQuery hook, slice to show the 3-4 most recent reviews sorted by publicationDate descending. Add a section heading 'Featured Motorcycle Reviews' with consistent styling. Display reviews using MotorcycleReviewCard components in a grid layout matching the existing featured sections pattern. Include a 'View All Motorcycles' link that navigates to /motorcycles. Ensure spacing and visual hierarchy match the existing featured sections for gear reviews and videos."
+        }
+      ]
+    },
+    {
+      "id": "REQ-21",
+      "summary": "Redesign the site logo to be more visually attractive and modern while maintaining brand recognition for a motorcycle review platform",
+      "acceptanceCriteria": [
+        "New logo image is generated and placed in frontend/public/assets/generated/",
+        "Logo reflects the motorcycle/motorsports theme",
+        "Logo works well in both light and dark theme modes",
+        "Logo is updated in Navigation.tsx component",
+        "Logo maintains appropriate dimensions for the navigation bar"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Navigation.tsx",
+          "operation": "modify",
+          "description": "Update the logo image source to reference the newly generated logo at frontend/public/assets/generated/logo.dim_200x60.png. Ensure the img element maintains appropriate alt text ('Moto Review Hub') and dimensions for the navigation bar. The logo should work well in both light and dark theme modes. Verify the existing logo styling and adjust if needed to accommodate the new design while maintaining navigation bar layout integrity."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 7,
+  "summary": "A professional motorcycle and moto safety gear review website with video and cinematic content hosting, designed to impress potential sponsors and companies with high-quality presentation and content showcase capabilities",
+  "architectural_notes": [
+    "Focus on professional, visually impressive design to attract sponsors",
+    "Content management system for reviews and vlogs",
+    "Replace 'vlogs' terminology with 'videos' throughout the application",
+    "Add cinematics category/section for high-quality cinematic motorcycle content"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Modern motorcycle-themed logo with sleek typography and motorsports aesthetic, optimized for navigation bar display (logo.dim_200x60.png)",
+  "existing_features": [
+    {
+      "id": "feature-implement-a-review-posting-form-that-allows-users-to-submit-new-motorcycle-gear-reviews-with-all-required-fields-including-gear-name-category-dropdown-brand-star-rating-selector-review-text-area-and-reviewer-name",
+      "title": "Implement a review posting form that allows users to submit new motorcycle gear reviews with all required fields including gear name, category dropdown, brand, star rating selector, review text area, and reviewer name",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-vlog-posting-form-that-allows-users-to-submit-new-vlogs-with-fields-for-title-description-video-embed-url-thumbnail-url-and-category-tags",
+      "title": "Implement a vlog posting form that allows users to submit new vlogs with fields for title, description, video embed URL, thumbnail URL, and category tags",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-professional-homepage-that-showcases-featured-reviews-and-vlogs-in-a-visually-impressive-grid-layout-with-high-quality-imagery-clear-typography-and-smooth-animations-to-attract-sponsors-and-companies",
+      "title": "Create a professional homepage that showcases featured reviews and vlogs in a visually impressive grid layout with high-quality imagery, clear typography, and smooth animations to attract sponsors and companies",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-reviews-listing-page-that-displays-all-gear-reviews-with-filtering-by-category-sorting-by-date-or-rating-and-search-functionality",
+      "title": "Create a reviews listing page that displays all gear reviews with filtering by category, sorting by date or rating, and search functionality",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-vlogs-gallery-page-that-displays-all-vlogs-with-embedded-video-players-organized-in-a-visually-appealing-grid-with-large-thumbnails-and-play-buttons",
+      "title": "Create a vlogs gallery page that displays all vlogs with embedded video players, organized in a visually appealing grid with large thumbnails and play buttons",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-individual-detail-pages-for-reviews-that-display-full-review-content-high-quality-gear-images-star-rating-specifications-and-related-reviews",
+      "title": "Create individual detail pages for reviews that display full review content, high-quality gear images, star rating, specifications, and related reviews",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-polished-navigation-system-with-logo-main-menu-links-home-reviews-vlogs-submit-content-and-a-prominent-call-to-action-for-sponsors",
+      "title": "Implement a polished navigation system with logo, main menu links (Home, Reviews, Vlogs, Submit Content), and a prominent call-to-action for sponsors",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-design-a-high-impact-visual-theme-with-a-bold-modern-aesthetic-using-premium-typography-high-contrast-color-palette-and-professional-photography-styling-to-create-an-impressive-sponsor-worthy-presentation",
+      "title": "Design a high-impact visual theme with a bold, modern aesthetic using premium typography, high-contrast color palette, and professional photography styling to create an impressive, sponsor-worthy presentation",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-rename-all-frontend-references-from-vlogs-to-videos-throughout-the-application-including-page-titles-navigation-labels-form-headers-and-component-names",
+      "title": "Rename all frontend references from 'Vlogs' to 'Videos' throughout the application including page titles, navigation labels, form headers, and component names",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-category-selector-or-filter-option-to-the-video-submission-form-and-video-listing-pages-that-allows-users-to-specify-or-filter-by-cinematics-as-a-distinct-content-type",
+      "title": "Add a category selector or filter option to the video submission form and video listing pages that allows users to specify or filter by 'Cinematics' as a distinct content type",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-homepage-featured-content-section-to-showcase-both-regular-videos-and-cinematics-content-maintaining-the-professional-sponsor-worthy-presentation",
+      "title": "Update the homepage featured content section to showcase both regular videos and cinematics content, maintaining the professional sponsor-worthy presentation",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-motorcycle-reviews-submission-form-that-allows-users-to-submit-new-motorcycle-reviews-with-fields-for-motorcycle-model-manufacturer-year-star-rating-selector-review-text-area-and-reviewer-name",
+      "title": "Create a motorcycle reviews submission form that allows users to submit new motorcycle reviews with fields for motorcycle model, manufacturer, year, star rating selector, review text area, and reviewer name",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-motorcycle-reviews-listing-page-that-displays-all-motorcycle-reviews-with-search-functionality-filtering-options-and-sorting-capabilities-newest-oldest-highest-rated",
+      "title": "Create a motorcycle reviews listing page that displays all motorcycle reviews with search functionality, filtering options, and sorting capabilities (newest, oldest, highest rated)",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-individual-detail-pages-for-motorcycle-reviews-that-display-full-review-content-motorcycle-specifications-model-manufacturer-year-star-rating-reviewer-information-and-publication-date",
+      "title": "Create individual detail pages for motorcycle reviews that display full review content, motorcycle specifications (model, manufacturer, year), star rating, reviewer information, and publication date",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-motorcycles-navigation-link-to-the-main-menu-in-navigation-tsx-and-update-routing-in-app-tsx-to-include-routes-for-motorcycle-reviews-listing-submission-form-and-detail-pages",
+      "title": "Add 'Motorcycles' navigation link to the main menu in Navigation.tsx and update routing in App.tsx to include routes for motorcycle reviews listing, submission form, and detail pages",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-homepage-home-tsx-to-include-a-featured-motorcycle-reviews-section-that-showcases-the-latest-motorcycle-reviews-alongside-existing-gear-reviews-and-videos",
+      "title": "Update the homepage (Home.tsx) to include a featured motorcycle reviews section that showcases the latest motorcycle reviews alongside existing gear reviews and videos",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-redesign-the-site-logo-to-be-more-visually-attractive-and-modern-while-maintaining-brand-recognition-for-a-motorcycle-review-platform",
+      "title": "Redesign the site logo to be more visually attractive and modern while maintaining brand recognition for a motorcycle review platform",
+      "reqIds": [
+        "REQ-21"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create motorcycle and moto safety gear review posting system",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Design professional, impressive UI to attract sponsors and companies",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Create a backend data model for motorcycle and moto safety gear reviews with fields for gear name, category (helmets, jackets, gloves, boots, etc.), brand, rating (1-5 stars), review text, reviewer name, and publication date",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Create a backend data model for vlogs with fields for title, description, video URL (YouTube/Vimeo embed link), thumbnail URL, publication date, and category tags",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Add cinematics section/option to showcase cinematic motorcycle content",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Update the backend Vlog data type to support a 'cinematics' category option alongside regular video content",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Add a dedicated section/page for motorcycle reviews (separate from gear reviews)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Redesign the logo to be more attractive and visually appealing",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Create a new backend data model for motorcycle reviews (distinct from gear reviews) with fields for motorcycle model, manufacturer, year, rating (1-5 stars), review text, reviewer name, and publication date",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Moto Review Hub",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

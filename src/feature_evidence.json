@@ -1,0 +1,117 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-motorcycle-reviews-submission-form-that-allows-users-to-submit-new-motorcycle-reviews-with-fields-for-motorcycle-model-manufacturer-year-star-rating-selector-review-text-area-and-reviewer-name",
+      "featureTitle": "Create a motorcycle reviews submission form that allows users to submit new motorcycle reviews with fields for motorcycle model, manufacturer, year, star rating selector, review text area, and reviewer name",
+      "files": [
+        "frontend/src/components/MotorcycleReviewForm.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-16"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-motorcycle-reviews-listing-page-that-displays-all-motorcycle-reviews-with-search-functionality-filtering-options-and-sorting-capabilities-newest-oldest-highest-rated",
+      "featureTitle": "Create a motorcycle reviews listing page that displays all motorcycle reviews with search functionality, filtering options, and sorting capabilities (newest, oldest, highest rated)",
+      "files": [
+        "frontend/src/components/MotorcycleReviewCard.tsx",
+        "frontend/src/hooks/useQueries.ts",
+        "frontend/src/pages/MotorcycleReviews.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-17"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-individual-detail-pages-for-motorcycle-reviews-that-display-full-review-content-motorcycle-specifications-model-manufacturer-year-star-rating-reviewer-information-and-publication-date",
+      "featureTitle": "Create individual detail pages for motorcycle reviews that display full review content, motorcycle specifications (model, manufacturer, year), star rating, reviewer information, and publication date",
+      "files": [
+        "frontend/src/pages/MotorcycleReviewDetail.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-18"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-motorcycles-navigation-link-to-the-main-menu-in-navigation-tsx-and-update-routing-in-app-tsx-to-include-routes-for-motorcycle-reviews-listing-submission-form-and-detail-pages",
+      "featureTitle": "Add 'Motorcycles' navigation link to the main menu in Navigation.tsx and update routing in App.tsx to include routes for motorcycle reviews listing, submission form, and detail pages",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Navigation.tsx",
+        "frontend/src/pages/SubmitMotorcycleReview.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-19"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-the-homepage-home-tsx-to-include-a-featured-motorcycle-reviews-section-that-showcases-the-latest-motorcycle-reviews-alongside-existing-gear-reviews-and-videos",
+      "featureTitle": "Update the homepage (Home.tsx) to include a featured motorcycle reviews section that showcases the latest motorcycle reviews alongside existing gear reviews and videos",
+      "files": [
+        "frontend/src/pages/Home.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-20"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-redesign-the-site-logo-to-be-more-visually-attractive-and-modern-while-maintaining-brand-recognition-for-a-motorcycle-review-platform",
+      "featureTitle": "Redesign the site logo to be more visually attractive and modern while maintaining brand recognition for a motorcycle review platform",
+      "files": [
+        "frontend/src/components/Navigation.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-21"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

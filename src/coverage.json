@@ -1,0 +1,122 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-20T02:26:20.060Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 7,
+    "implemented": 6,
+    "items": [
+      {
+        "id": "REQ-15",
+        "summary": "Create a new backend data model for motorcycle reviews (distinct from gear reviews) with fields for motorcycle model, manufacturer, year, rating (1-5 stars), review text, reviewer name, and publication date",
+        "status": "unknown",
+        "plannedFiles": [],
+        "matchedFiles": []
+      },
+      {
+        "id": "REQ-16",
+        "summary": "Create a motorcycle reviews submission form that allows users to submit new motorcycle reviews with fields for motorcycle model, manufacturer, year, star rating selector, review text area, and reviewer name",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/MotorcycleReviewForm.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/MotorcycleReviewForm.tsx"
+        ]
+      },
+      {
+        "id": "REQ-17",
+        "summary": "Create a motorcycle reviews listing page that displays all motorcycle reviews with search functionality, filtering options, and sorting capabilities (newest, oldest, highest rated)",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/MotorcycleReviewCard.tsx",
+          "frontend/src/pages/MotorcycleReviews.tsx",
+          "frontend/src/hooks/useQueries.ts"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/MotorcycleReviewCard.tsx",
+          "frontend/src/pages/MotorcycleReviews.tsx",
+          "frontend/src/hooks/useQueries.ts"
+        ]
+      },
+      {
+        "id": "REQ-18",
+        "summary": "Create individual detail pages for motorcycle reviews that display full review content, motorcycle specifications (model, manufacturer, year), star rating, reviewer information, and publication date",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/MotorcycleReviewDetail.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/MotorcycleReviewDetail.tsx"
+        ]
+      },
+      {
+        "id": "REQ-19",
+        "summary": "Add 'Motorcycles' navigation link to the main menu in Navigation.tsx and update routing in App.tsx to include routes for motorcycle reviews listing, submission form, and detail pages",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/Navigation.tsx",
+          "frontend/src/App.tsx",
+          "frontend/src/pages/SubmitMotorcycleReview.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Navigation.tsx",
+          "frontend/src/App.tsx",
+          "frontend/src/pages/SubmitMotorcycleReview.tsx"
+        ]
+      },
+      {
+        "id": "REQ-20",
+        "summary": "Update the homepage (Home.tsx) to include a featured motorcycle reviews section that showcases the latest motorcycle reviews alongside existing gear reviews and videos",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/Home.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/Home.tsx"
+        ]
+      },
+      {
+        "id": "REQ-21",
+        "summary": "Redesign the site logo to be more visually attractive and modern while maintaining brand recognition for a motorcycle review platform",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/Navigation.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Navigation.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "backend/main.mo",
+    "backend/migration.mo",
+    "build-request.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/public/assets/generated/logo.dim_200x60.png",
+    "frontend/src/App.tsx",
+    "frontend/src/backend.d.ts",
+    "frontend/src/backend.ts",
+    "frontend/src/components/MotorcycleReviewCard.tsx",
+    "frontend/src/components/MotorcycleReviewForm.tsx",
+    "frontend/src/components/Navigation.tsx",
+    "frontend/src/declarations/backend.did.d.ts",
+    "frontend/src/declarations/backend.did.js",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/pages/Home.tsx",
+    "frontend/src/pages/MotorcycleReviewDetail.tsx",
+    "frontend/src/pages/MotorcycleReviews.tsx",
+    "frontend/src/pages/SubmitMotorcycleReview.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "kind": "build_request",
+  "title": "Add motorcycle reviews section and redesign logo",
+  "projectName": "Moto Review Hub",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-15",
+      "text": "Create a new backend data model for motorcycle reviews (distinct from gear reviews) with fields for motorcycle model, manufacturer, year, rating (1-5 stars), review text, reviewer name, and publication date",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "Add a section for motorcycle reviews"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A new MotorcycleReview type is defined in backend/main.mo with all specified fields",
+        "Backend provides public functions to add and retrieve motorcycle reviews",
+        "Motorcycle reviews are stored separately from gear reviews",
+        "Reviews are sorted by publication date in descending order"
+      ]
+    },
+    {
+      "id": "REQ-16",
+      "text": "Create a motorcycle reviews submission form that allows users to submit new motorcycle reviews with fields for motorcycle model, manufacturer, year, star rating selector, review text area, and reviewer name",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "Add a section for motorcycle reviews"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Form includes all required input fields with appropriate validation",
+        "Star rating selector allows users to select 1-5 stars",
+        "Form submission successfully creates a new motorcycle review in the backend",
+        "Success message is displayed upon successful submission",
+        "Form follows the existing design system and styling patterns"
+      ]
+    },
+    {
+      "id": "REQ-17",
+      "text": "Create a motorcycle reviews listing page that displays all motorcycle reviews with search functionality, filtering options, and sorting capabilities (newest, oldest, highest rated)",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "Add a section for motorcycle reviews"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Page displays all motorcycle reviews in a grid layout",
+        "Search bar filters reviews by motorcycle model or manufacturer",
+        "Sort dropdown allows sorting by newest, oldest, and highest rated",
+        "Each review card shows motorcycle model, manufacturer, year, rating, and preview text",
+        "Clicking a review card navigates to the detailed review page",
+        "Loading states and empty states are handled appropriately"
+      ]
+    },
+    {
+      "id": "REQ-18",
+      "text": "Create individual detail pages for motorcycle reviews that display full review content, motorcycle specifications (model, manufacturer, year), star rating, reviewer information, and publication date",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "Add a section for motorcycle reviews"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Detail page shows complete motorcycle review information",
+        "Star rating is displayed prominently",
+        "Motorcycle specifications are clearly organized",
+        "Page layout is consistent with existing detail pages (ReviewDetail.tsx pattern)",
+        "Navigation back to motorcycle reviews list is provided"
+      ]
+    },
+    {
+      "id": "REQ-19",
+      "text": "Add 'Motorcycles' navigation link to the main menu in Navigation.tsx and update routing in App.tsx to include routes for motorcycle reviews listing, submission form, and detail pages",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "Add a section for motorcycle reviews"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Navigation bar includes a 'Motorcycles' link positioned logically in the menu",
+        "Routes are configured for /motorcycles, /motorcycles/:id, and /submit-motorcycle-review",
+        "All routes render the correct components",
+        "Mobile hamburger menu includes the new navigation item"
+      ]
+    },
+    {
+      "id": "REQ-20",
+      "text": "Update the homepage (Home.tsx) to include a featured motorcycle reviews section that showcases the latest motorcycle reviews alongside existing gear reviews and videos",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "Add a section for motorcycle reviews"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Homepage displays a dedicated section for featured motorcycle reviews",
+        "Section shows 3-4 latest motorcycle reviews in a visually appealing layout",
+        "Section heading clearly identifies it as motorcycle reviews",
+        "Layout maintains consistency with existing featured sections",
+        "Click-through navigation to full motorcycle reviews list is provided"
+      ]
+    },
+    {
+      "id": "REQ-21",
+      "text": "Redesign the site logo to be more visually attractive and modern while maintaining brand recognition for a motorcycle review platform",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "change the logo and make it attractive"
+        ]
+      },
+      "acceptanceCriteria": [
+        "New logo image is generated and placed in frontend/public/assets/generated/",
+        "Logo reflects the motorcycle/motorsports theme",
+        "Logo works well in both light and dark theme modes",
+        "Logo is updated in Navigation.tsx component",
+        "Logo maintains appropriate dimensions for the navigation bar"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify frontend/src/hooks/useInternetIdentity.ts or frontend/src/hooks/useActor.ts",
+    "Do not modify frontend/src/components/ui components",
+    "Maintain the single-actor architecture in backend/main.mo",
+    "Follow existing naming conventions and patterns from gear reviews implementation"
+  ],
+  "nonGoals": [
+    "Modifying existing gear review or video functionality",
+    "Adding authentication requirements for motorcycle review submission",
+    "Implementing motorcycle comparison features",
+    "Adding image upload functionality for motorcycles"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Modern motorcycle-themed logo with sleek typography and motorsports aesthetic, optimized for navigation bar display (logo.dim_200x60.png)"
+    ],
+    "edits": []
+  }
+}
